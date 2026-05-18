@@ -1,0 +1,442 @@
+{
+  "info": {
+    "_postman_id": "7e631199-2fa6-45cc-87ec-7a580763cb82",
+    "name": "vehicle_maintenance_scheduler",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51966976",
+    "_collection_link": "https://go.postman.co/collection/51966976-7e631199-2fa6-45cc-87ec-7a580763cb82?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "health_check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "health_check",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/health",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "health"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-Request-Id",
+              "value": "6be75efc-7529-4901-8937-8dcbff5b5940"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "116"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"74-9TmXgF64CmBS/QqiZwUFzHpp+G4\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 18 May 2026 11:19:15 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"status\": \"healthy\",\n    \"service\": \"vehicle-maintenance-scheduler\",\n    \"timestamp\": \"2026-05-18T11:19:15.546Z\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get_Optimal_Maintenance_Schedule",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/schedule/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "schedule",
+            "2"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get_Optimal_Maintenance_Schedule",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/schedule/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "schedule",
+                "2"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-Request-Id",
+              "value": "3dfccd56-beb8-495a-b3bf-eb44d9ecb16c"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "2538"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"9ea-W7mO9GydyCTCU79XqCOA7gPuAMY\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 18 May 2026 11:03:52 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"depotId\": 2,\n        \"mechanicHours\": 135,\n        \"totalHoursUsed\": 135,\n        \"maxImpact\": 180,\n        \"selectedVehicles\": [\n            {\n                \"TaskID\": \"d4231c14-d7c1-4bc8-a006-6614041fdae5\",\n                \"Duration\": 5,\n                \"Impact\": 3\n            },\n            {\n                \"TaskID\": \"4d3eb827-3469-4ddf-b110-9c935b266de2\",\n                \"Duration\": 7,\n                \"Impact\": 9\n            },\n            {\n                \"TaskID\": \"ed192c9f-289e-42c6-8fc7-d4bfa14db2b0\",\n                \"Duration\": 1,\n                \"Impact\": 6\n            },\n            {\n                \"TaskID\": \"75a7897a-3582-4b49-a763-3b7bc917b5fa\",\n                \"Duration\": 1,\n                \"Impact\": 6\n            },\n            {\n                \"TaskID\": \"5e0f940a-f7a4-48c8-bab8-c19c38888fc5\",\n                \"Duration\": 1,\n                \"Impact\": 5\n            },\n            {\n                \"TaskID\": \"32ab9aec-74a9-4dbb-b24b-71c76eddbc11\",\n                \"Duration\": 8,\n                \"Impact\": 4\n            },\n            {\n                \"TaskID\": \"34deaee0-aa5b-4e0d-aa9e-ac49eabb3b76\",\n                \"Duration\": 3,\n                \"Impact\": 7\n            },\n            {\n                \"TaskID\": \"350a5a00-5209-4da6-950f-b332d61a380c\",\n                \"Duration\": 1,\n                \"Impact\": 5\n            },\n            {\n                \"TaskID\": \"d0816703-2aae-4ec5-bfec-420dba25cf16\",\n                \"Duration\": 5,\n                \"Impact\": 2\n            },\n            {\n                \"TaskID\": \"8e8e98ed-125c-4948-84eb-6a98e6f36a52\",\n                \"Duration\": 8,\n                \"Impact\": 9\n            },\n            {\n                \"TaskID\": \"00850855-3aae-4939-87a5-b66b72e84547\",\n                \"Duration\": 7,\n                \"Impact\": 9\n            },\n            {\n                \"TaskID\": \"651b4328-8ffa-450b-a2db-dbdaad9fb7e7\",\n                \"Duration\": 1,\n                \"Impact\": 2\n            },\n            {\n                \"TaskID\": \"42379480-faa1-45f4-8bb9-aa06e362b114\",\n                \"Duration\": 5,\n                \"Impact\": 6\n            },\n            {\n                \"TaskID\": \"cf0a65e4-1b0e-4195-89d9-17c92f4b717f\",\n                \"Duration\": 1,\n                \"Impact\": 2\n            },\n            {\n                \"TaskID\": \"a8ce354e-cbfc-4fb8-9153-f7f84ed4197c\",\n                \"Duration\": 7,\n                \"Impact\": 4\n            },\n            {\n                \"TaskID\": \"42d2db8d-4af2-481c-9a1f-05dfdc4b5458\",\n                \"Duration\": 1,\n                \"Impact\": 5\n            },\n            {\n                \"TaskID\": \"8e91f009-1b89-4167-a6aa-1fedfa99748c\",\n                \"Duration\": 5,\n                \"Impact\": 10\n            },\n            {\n                \"TaskID\": \"db8631c8-b699-49d5-b5be-83d1eda9db38\",\n                \"Duration\": 4,\n                \"Impact\": 8\n            },\n            {\n                \"TaskID\": \"905afcc7-93c0-43fd-8b19-89c28c7990e8\",\n                \"Duration\": 8,\n                \"Impact\": 4\n            },\n            {\n                \"TaskID\": \"7283741f-5a50-4a6e-b1cc-1b1d0748c0bf\",\n                \"Duration\": 1,\n                \"Impact\": 10\n            },\n            {\n                \"TaskID\": \"0253c99e-3bef-4efc-adfc-a1fefe4f90b0\",\n                \"Duration\": 3,\n                \"Impact\": 8\n            },\n            {\n                \"TaskID\": \"31179d18-1448-41cd-9ed1-533bed1844bd\",\n                \"Duration\": 4,\n                \"Impact\": 4\n            },\n            {\n                \"TaskID\": \"396de1e6-241c-4479-84a4-c658a7f4d25e\",\n                \"Duration\": 1,\n                \"Impact\": 1\n            },\n            {\n                \"TaskID\": \"3cd8b7a9-d8c5-4eaf-9c39-d06f940d2760\",\n                \"Duration\": 6,\n                \"Impact\": 3\n            },\n            {\n                \"TaskID\": \"304e8c2a-d8f4-4af7-bf31-cfc7fa7379ea\",\n                \"Duration\": 5,\n                \"Impact\": 5\n            },\n            {\n                \"TaskID\": \"5bb816ba-7b10-4dc1-87d7-697212c154bb\",\n                \"Duration\": 8,\n                \"Impact\": 10\n            },\n            {\n                \"TaskID\": \"166ff1ec-f088-4944-9860-b94fcf93f3e9\",\n                \"Duration\": 5,\n                \"Impact\": 7\n            },\n            {\n                \"TaskID\": \"3a3266ef-5ed0-45e6-aecb-57d7a9d61353\",\n                \"Duration\": 3,\n                \"Impact\": 10\n            },\n            {\n                \"TaskID\": \"fc7d9c17-ac09-4921-92fc-661ccfef3443\",\n                \"Duration\": 8,\n                \"Impact\": 3\n            },\n            {\n                \"TaskID\": \"7dce5b87-33a2-4d1f-8abf-8c4625ceb83a\",\n                \"Duration\": 2,\n                \"Impact\": 1\n            },\n            {\n                \"TaskID\": \"7b000ad5-07e2-498c-812c-585a4905c150\",\n                \"Duration\": 4,\n                \"Impact\": 6\n            },\n            {\n                \"TaskID\": \"83b8c1c5-ba80-4a65-b42d-57f3f270fa13\",\n                \"Duration\": 6,\n                \"Impact\": 6\n            }\n        ]\n    },\n    \"requestId\": \"3dfccd56-beb8-495a-b3bf-eb44d9ecb16c\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Handle_Invalid_Depot",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/schedule/999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "schedule",
+            "999"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Handle_Invalid_Depot",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/schedule/999",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "schedule",
+                "999"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-Request-Id",
+              "value": "60c843d7-1358-4dcd-9b4d-5d9aa50cded1"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "108"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"6c-3x0TNhjpoJ+H6wRQccVxydt2tfI\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 18 May 2026 11:07:01 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Depot with ID 999 not found\",\n    \"requestId\": \"60c843d7-1358-4dcd-9b4d-5d9aa50cded1\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Fetch_Vehicle_System_Notifications",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/notifications?limit=5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "notifications"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Fetch_Vehicle_System_Notifications",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/notifications?limit=5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "notifications"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-Request-Id",
+              "value": "944d2cd7-4b23-4480-98f6-278db5d16b9c"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "664"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"298-kZXqSnj4XhzGK7MhkCxbFtvblaA\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 18 May 2026 11:10:39 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"ID\": \"c15e7db9-20f9-4def-8a93-6c59abf93255\",\n            \"Type\": \"Result\",\n            \"Message\": \"project-review\",\n            \"Timestamp\": \"2026-05-18 01:10:22\"\n        },\n        {\n            \"ID\": \"7d3c1b1d-6741-4b60-9aa3-c84733025e5a\",\n            \"Type\": \"Result\",\n            \"Message\": \"end-sem\",\n            \"Timestamp\": \"2026-05-18 02:40:08\"\n        },\n        {\n            \"ID\": \"d7298439-c7aa-4097-8597-1a3b6ab07c99\",\n            \"Type\": \"Result\",\n            \"Message\": \"mid-sem\",\n            \"Timestamp\": \"2026-05-17 12:39:54\"\n        },\n        {\n            \"ID\": \"2b82e5f6-bccc-4e3f-b759-402067ce6a1d\",\n            \"Type\": \"Event\",\n            \"Message\": \"farewell\",\n            \"Timestamp\": \"2026-05-18 01:39:40\"\n        },\n        {\n            \"ID\": \"dd31830e-9d0a-445c-a8c4-ead6881f37fd\",\n            \"Type\": \"Result\",\n            \"Message\": \"internal\",\n            \"Timestamp\": \"2026-05-17 21:39:26\"\n        }\n    ],\n    \"requestId\": \"944d2cd7-4b23-4480-98f6-278db5d16b9c\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get_Priority_Inbox_(Heap Sorted)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/notifications/priority-inbox",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "notifications",
+            "priority-inbox"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get_Priority_Inbox_(Heap Sorted)",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/notifications/priority-inbox",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "notifications",
+                "priority-inbox"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-Request-Id",
+              "value": "a5aafc11-352c-4744-a7a9-5950b511cd78"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1312"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"520-JYIJkubHBmdz/ItHlSQut53pHg8\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 18 May 2026 11:14:51 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"ID\": \"926dcbe9-1a67-43d0-86fa-543f65b504e1\",\n            \"Type\": \"Placement\",\n            \"Message\": \"Advanced Micro Devices Inc. hiring\",\n            \"Timestamp\": \"2026-05-18 08:11:32\"\n        },\n        {\n            \"ID\": \"d751e870-4f81-4a56-ad61-936acb4f3516\",\n            \"Type\": \"Placement\",\n            \"Message\": \"Microsoft Corporation hiring\",\n            \"Timestamp\": \"2026-05-17 22:43:24\"\n        },\n        {\n            \"ID\": \"51c71484-2424-4c66-a95f-454b7c1d2ee4\",\n            \"Type\": \"Result\",\n            \"Message\": \"mid-sem\",\n            \"Timestamp\": \"2026-05-18 10:43:52\"\n        },\n        {\n            \"ID\": \"7d3c1b1d-6741-4b60-9aa3-c84733025e5a\",\n            \"Type\": \"Result\",\n            \"Message\": \"end-sem\",\n            \"Timestamp\": \"2026-05-18 02:40:08\"\n        },\n        {\n            \"ID\": \"66ea91fb-b1c1-4e41-a1bf-6a95706cd8df\",\n            \"Type\": \"Result\",\n            \"Message\": \"project-review\",\n            \"Timestamp\": \"2026-05-18 02:14:06\"\n        },\n        {\n            \"ID\": \"a43b86c2-e26d-45bf-8ccd-ccfc99778c4c\",\n            \"Type\": \"Result\",\n            \"Message\": \"end-sem\",\n            \"Timestamp\": \"2026-05-18 01:44:20\"\n        },\n        {\n            \"ID\": \"c15e7db9-20f9-4def-8a93-6c59abf93255\",\n            \"Type\": \"Result\",\n            \"Message\": \"project-review\",\n            \"Timestamp\": \"2026-05-18 01:10:22\"\n        },\n        {\n            \"ID\": \"b5d94347-c632-4794-a2e2-9b5899f0a9e2\",\n            \"Type\": \"Result\",\n            \"Message\": \"internal\",\n            \"Timestamp\": \"2026-05-17 18:42:14\"\n        },\n        {\n            \"ID\": \"31a074b7-cef5-4703-a5f6-de17eb943e2b\",\n            \"Type\": \"Result\",\n            \"Message\": \"mid-sem\",\n            \"Timestamp\": \"2026-05-17 18:40:50\"\n        },\n        {\n            \"ID\": \"38b6caf0-337a-477b-b53a-38748bcc70d6\",\n            \"Type\": \"Result\",\n            \"Message\": \"project-review\",\n            \"Timestamp\": \"2026-05-17 17:14:34\"\n        }\n    ],\n    \"requestId\": \"a5aafc11-352c-4744-a7a9-5950b511cd78\"\n}"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "vehicle-maintenance-scheduler",
+  "version": "1.0.0",
+  "description": "Production-grade vehicle maintenance scheduling microservice — 0/1 Knapsack DP optimization",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "vehicle",
+    "maintenance",
+    "scheduler",
+    "knapsack",
+    "microservice",
+    "backend"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "logging-middleware": "file:../logging_middleware",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
